@@ -8,16 +8,6 @@ from playsound import playsound
 
 cowin = CoWinAPI()
 states = cowin.get_states()
-# print("All States List : ")
-# for i in range(len(states['states'])):
-#     print(states['states'][i])
-#
-# state_id = input("Enter State ID: ")
-# districts = cowin.get_districts(state_id)
-#
-# print("Districts by State Id : ")
-# pprint(districts)
-
 pin_code = '713104'
 date = '18-07-2022'
 k = 0
@@ -43,3 +33,17 @@ while k != 1:
             else:
                 last = available_centers['centers'][i]['sessions'][0]['available_capacity_dose2']
                 print(last)
+
+
+
+
+
+# print("All States List : ")
+# for i in range(len(states['states'])):
+#     print(states['states'][i])
+#
+# state_id = input("Enter State ID: ")
+# districts = cowin.get_districts(state_id)
+#
+# print("Districts by State Id : ")
+# pprint(districts)
