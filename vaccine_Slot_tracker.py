@@ -1,4 +1,5 @@
 from multiprocessing.connection import wait
+from random import randint
 from cowin_api import CoWinAPI
 from pprint import pprint
 import pywhatkit
@@ -18,9 +19,9 @@ playsound('txttosp1.mp3')
 last = -1
 while k != 1:
     print("Running.")
-    time.sleep(2)
+    time.sleep(randint(0,1))
     print("Running..")
-    time.sleep(2)
+    time.sleep(randint(0,1))
     print("Running...")
     available_centers = cowin.get_availability_by_pincode(pin_code, date)
 
@@ -41,7 +42,7 @@ while k != 1:
                 last = available_centers['centers'][i]['sessions'][0]['available_capacity_dose2']
                 print(last)
 
-    time.sleep(20)
+    time.sleep(10)
 
 
 
