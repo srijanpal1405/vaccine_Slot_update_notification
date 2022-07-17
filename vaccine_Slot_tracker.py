@@ -8,11 +8,13 @@ from playsound import playsound
 
 cowin = CoWinAPI()
 states = cowin.get_states()
-pin_code = '713104'
-date = '18-07-2022'
+pin_code = input("Enter pin code: ")
+# center_name = input("center_name: ")
+date = input("Enter date(dd-mm-yyyy): ")
+phone= input("Enter whatsapp number where you want to receive alert")
 k = 0
 playsound('txttosp1.mp3')
-last = 3
+last = 0
 while k != 1:
     print("Running...")
     available_centers = cowin.get_availability_by_pincode(pin_code, date)
@@ -24,7 +26,7 @@ while k != 1:
             if available_centers['centers'][i]['sessions'][0]['available_capacity_dose2'] > last:
 
                 print(available_centers['centers'][i]['sessions'][0]['available_capacity_dose2'])
-                pywhatkit.sendwhatmsg("+917001869561", "check cowin", int(time.strftime("%H", time.localtime())),
+                pywhatkit.sendwhatmsg(phone, "check cowin", int(time.strftime("%H", time.localtime())),
                                       int(time.strftime("%M", time.localtime())) + 1, 7, False)
                 while(1):
                     playsound('E:/python/vaccine_Tracker/txttosp.mp3')
