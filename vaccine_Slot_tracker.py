@@ -14,7 +14,7 @@ date = input("Enter date(dd-mm-yyyy): ")
 phone= input("Enter whatsapp number where you want to receive alert")
 k = 0
 playsound('txttosp1.mp3')
-last = 0
+last = -1
 while k != 1:
     print("Running...")
     available_centers = cowin.get_availability_by_pincode(pin_code, date)
