@@ -11,7 +11,7 @@ states = cowin.get_states()
 pin_code = input("Enter pin code: ")
 # center_name = input("center_name: ")
 date = input("Enter date(dd-mm-yyyy): ")
-phone= input("Enter whatsapp number where you want to receive alert")
+phone= input("Enter whatsapp number where you want to receive alert: ")
 k = 0
 playsound('txttosp1.mp3')
 last = -1
