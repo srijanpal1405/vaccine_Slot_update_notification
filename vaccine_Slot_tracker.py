@@ -15,7 +15,7 @@ pin_code = input("Enter pin code: ")
 date = input("Enter date(dd-mm-yyyy): ")
 phone= input("Enter whatsapp number where you want to receive alert: ")
 k = 0
-playsound('txttosp1.mp3')
+playsound('txttosp.mp3')
 last = -1
 while k != 1:
     print("Running.")
@@ -35,7 +35,7 @@ while k != 1:
                 pywhatkit.sendwhatmsg(phone, "check cowin", int(time.strftime("%H", time.localtime())),
                                       int(time.strftime("%M", time.localtime())) + 1, 7, False)
                 while(1):
-                    playsound('E:/python/vaccine_Tracker/txttosp.mp3')
+                    playsound('E:/python/vaccine_Tracker/txttosp1.mp3')
                     k = 1
 
             else:
@@ -44,7 +44,7 @@ while k != 1:
 
     time.sleep(10)
 
-
+input()
 
 # print("All States List : ")
 # for i in range(len(states['states'])):
